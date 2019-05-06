@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="google-signin-client_id" content="765170646514-s4f1bkse4e13l7k45a6qodt7cfv4f84j.apps.googleusercontent.com">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/public/css/style.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet" type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <title>Todo Apps</title>
+    </head>
+
+    <body>
+        <div class="bg">
+            <!-- Logout start -->
+            <div id="logout" class="topnav">
+                <button class="button" style="float:right" onclick="signOut()" ><span>Logout </span></button>
+            </div>
+            <!-- Logout end -->
+
+            <!-- login start -->
+            <div id="loginBox" class="loginbox">
+                <img src="/public/image/man.png" class="avatar">
+                <h1>Login Member</h1>
+                <form action="#!" method="POST">
+                    <label class="err-message" for="email" id="login-err"><i class="fa fa-times-circle"></i>Email/Password wrong!</label>
+                    <label class="err-message" for="email" id="email-err"><i class="fa fa-times-circle"></i>Email is required!</label>
+                    <input type="text" id="email" placeholder="E-mail" required>
+                    </i><label class="err-message" for="password" id="password-err"><i class="fa fa-times-circle"></i>Password is required!</label>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <br>
+                    <button id="btn-sign-in" class="button-login" onclick="login()"><span>LOGIN</span></button>
+                    <p>
+                        Not a member? <a href="#!" id="btn-register">Register</a>
+                    </p>
+                    <p>Or Sign In with : </p>
+                    <div class="g-signin2" data-onsuccess="onSignIn" style="float:right"></div>
+                </form>
+            </div>
+            <!-- login end -->
+        
+            <!-- SignUp start -->
+            <div id="signUpBox" class="loginbox">
+                <img src="/public/image/man.png" class="avatar">
+                <h1>Register</h1>
+                <form action="#!" method="POST">
+                    <label class="err-message" for="email" id="singup-name-err"><i class="fa fa-times-circle"></i>Name is required!</label>
+                    <input type="text" id="register_name" placeholder="Name...">                      
+                    <label class="err-message" for="email" id="singup-email-err"><i class="fa fa-times-circle"></i>email is required!</label>
+                    <input type="text" id="register_email" placeholder="E-mail...">
+                    <label class="err-message" for="email" id="singup-pass-err"><i class="fa fa-times-circle"></i>Password is required!</label>
+                    <input type="password" id="register_password" placeholder="Password...">
+                    <label class="err-message" for="email" id="singup-match-err"><i class="fa fa-times-circle"></i>Password is not macth!</label>
+                    <input type="password" id="register_confirm_password" placeholder="Confirm Password...">
+                    <br>
+                    <button id="btn-sign-up" class="button-login" onclick="register()"><span>SIGN UP</span></button>
+                    <p>
+                        Already have an account? <a href="#!" id="btn-login" >Login</a>
+                    </p>
+                </form>
+            </div>
+            <!-- SignUp end -->
+        
+            <!-- conten start -->
+            <div class="row">
+                <!-- menu left start -->
+                <div class="leftcolumn">
+                    <div class="menu">
+                        <div class="">
+                            <i class="fa fa-camera w3-text-yellow w3-jumbo" style="margin-left: 30%"></i>
+                            <div id="profileUser">
+                                <!-- user name -->
+                            </div>
+                            <hr>
+                            <br>        
+                            <a class="button-menu" id="btn-addTodo"><i class="fa fa-plus"></i> Add todo</a>
+                            <br>
+                            <a class="button-menu" onclick="getMyTodosOpen()"><i class="fa fa-pencil-square-o"></i> My Todos</a>
+                            <br>
+                            <a class="button-menu" onclick="getMyTodosHistory()"><i class="fa fa-tasks"></i> History Todos</a>
+                            <br>
+                        </div>
+                    </div>        
+                </div>
+                <!-- menu left end -->            
+                <div id="todoDetail" class="rightcolumn">
+                    <!-- todo detail -->  
+                </div>
+
+                <div id="createTodo" class="rightcolumn">
+                    <div class="conten">
+                        <form action="#!" method="post" id="todo-form">
+                            <input type="text" id="todo_name" name="todo_name" placeholder="Todo Name"><br>   
+                            <textarea rows = "5" cols = "40" id="description" name = "description" placeholder="Description"></textarea><br>
+                            <input type="date" name="due_date" id="due_date" placeholder="Due date"><br>
+                            <br>
+                            <button class="button-submit"><span>SUBMIT</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- conten end -->
+        </div>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="./script/main.js"></script>
+    <script type="text/javascript" src="./script/user.js"></script>
+    <script type="text/javascript" src="./script/todo.js"></script>
+
+</body>
+</html>

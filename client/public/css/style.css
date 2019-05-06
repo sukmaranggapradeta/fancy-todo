@@ -1,0 +1,403 @@
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+* {
+  margin :0;
+  box-sizing: border-box;
+}
+.bg { 
+  background-image: url("/public/image/work.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed
+}
+.header h1 {
+  font-size: 50px;
+}  
+  /* login */
+.loginbox {
+  width: 400px;
+  height: 470px;
+  background:rgba(0,0,0,.5);
+  color: #fff;
+  top: 50%;
+  left: 48.5%;
+  position: absolute;
+  transform: translate(-50%,-50%) ;
+  box-sizing: border-box;
+  padding: 50px 50px;
+  border-radius: 5px;
+  /* display: none; */
+}
+.avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+h1{
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 32px;
+}
+.button-login {
+  width: 100%;
+  border: none;
+  outline:none;
+  height: 40px;
+  background:#EFC849;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+/* .loginbox input[type="submit"]:hover
+{
+  cursor: pointer;
+  background: #f4511e;
+  color: white;
+} */
+textarea{
+  border-radius: 5px;
+
+}
+#createTodo input[type="date"]
+{
+  border-radius: 5px;
+  height: 35px;
+  width: 150px;
+  background: #FAFAFA;
+  padding: 5px;
+	margin-bottom:10px;
+}
+#createTodo input[type="text"]
+{
+  border-radius: 5px;
+  height: 35px;
+  width: 70%;
+  background: #FAFAFA;
+  padding: 5px;
+	margin-bottom:10px;
+}
+
+.loginbox input[type="text"], input[type="password"],input[type="email"]
+{
+  border-radius: 5px;
+  height: 35px;
+  width: 100%;
+  background: #FAFAFA;
+  padding: 5px;
+  margin-bottom:5px;
+  margin-top:5px;
+}
+  /* logout */
+  .button-submit {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: mediumseagreen;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+    width: 140px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    float: right;;
+  }
+  .button-submit:hover span {
+    padding-right: 25px;
+  }
+  .button-submit:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .button-submit span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button-submit span:after {
+    content: '\002b';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #EB8B34;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 7px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    /* display: none; */
+  }
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button-login span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button-login span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .button-login:hover span {
+    padding-right: 25px;
+  }
+  .button-login:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .button:hover span {
+    padding-right: 25px;
+  }
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .topnav {
+    overflow: hidden;
+  }
+  .topnav a {
+    display: block;
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  /* layout */
+  .row {
+    /* margin-top:2%; */
+    margin-left:10%;
+    /* display: none; */
+  }
+  .leftcolumn {   
+    float: left;
+    width: 27%;
+
+  }  
+  .rightcolumn {
+    float: left;
+    width: 60%;
+  }
+  .menu { 
+    display: inline-block;
+    padding: 50px;
+    border: 1px solid white;
+    background:rgba(0,0,0,.5);
+    border-radius:5px;
+    width: 90%;  
+  }
+  .conten { 
+    display: inline-block;
+    padding: 20px;
+    border: 1px solid white;
+    background:rgba(0,0,0,.5);
+    border-radius:5px;
+    width: 90%;  
+  }
+  /* login */
+  .row-login {
+    margin-top:2%;
+    margin-left:31.5%;
+  }
+  .midcolumn {   
+    float: center;
+    width: 55%;
+  }  
+
+  /* user */
+  #user-icon {
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  /* menubar */
+  .menubar{
+    border: none;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+  }
+  .menubar:hover{
+    background-color: #555555;
+    color: white;
+  }
+
+  p {
+    margin:10px;
+    text-align: justify;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+  }
+  h2{
+    font-family: 'Raleway', sans-serif;
+    color:white;
+  }
+a{
+  font-size: 18px;
+}
+#btn-login:visited {
+  color: yellowgreen  ;
+}
+#btn-login:hover {
+  color: yellow;
+}
+
+#btn-register:visited {
+  color: yellowgreen  ;
+}
+#btn-register:hover {
+  color: yellow;
+}
+
+/* selected link */
+#btn-register:active {
+  color: blue;
+}
+.btn-danger{
+  background-color: lightsalmon;
+  color: white;
+  padding:5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn-danger:hover {
+  background-color: crimson;
+}
+#showTips{
+  background-color: mediumseagreen;
+  color: white;
+  padding:5px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+#showTips:hover{
+  /* color: springgreen; */
+  background-color: seagreen;
+}
+
+
+.btn-complete{
+  /* color: aquamarine; */
+  background-color: mediumseagreen;
+  color: white;
+  padding:5px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.btn-complete:hover{
+  /* color: springgreen; */
+  background-color: seagreen;
+}
+
+.fa {
+  color: white;
+}
+h6{
+  color: white;
+}
+.button-menu{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: black;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button-menu:hover{
+  background-color: peru;
+}
+
+.err-message{
+  margin-bottom: 10px;
+  padding: 7px 0;
+  border-radius: 3px;
+  color: #d8000c;;
+  background-color: #ffbaba;
+}
+
+  /* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+  
+  /* Responsive layout */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+    .rightcolumn {   
+      margin-top:5%;
+    }
+  }
+  /* Responsive layout */
+  @media screen and (max-width: 400px) {
+    .topnav a {
+      float: none;
+      width: 100%;
+    }
+  }
