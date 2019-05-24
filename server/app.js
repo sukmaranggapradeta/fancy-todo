@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/users', userRoute);
 app.use('/google', googleRoute);
 
-app.use(Authenticate)//google auth masi error
+app.use(Authenticate)
 // app.use(Authorize)
 app.use('/todos', todoRoute);
 
