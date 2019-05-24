@@ -16,7 +16,7 @@ function createTodo(){
         }
     })
     .done((newTodo)=>{
-        // console.log(newTodo)
+        console.log(newTodo)
         $('#todo_name').val('');
         $('#description').val('');
         $('#due_date').val('');

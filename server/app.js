@@ -21,13 +21,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/users', userRoute);
 app.use('/google', googleRoute);
 
-// app.use(Authenticate)//google auth masi error
+app.use(Authenticate)//google auth masi error
 // app.use(Authorize)
 app.use('/todos', todoRoute);
 
 app.use(errHandling)
 
-mongoose.connect('mongodb://localhost/todoDB', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost/todoDB', {useNewUrlParser: true});
+mongoose.connect('mongodb+srv://admin:admin@cluster0-4otze.gcp.mongodb.net/test?retryWrites=true', {useNewUrlParser: true},(err)=>{
+    if (err) console.log('database err')
+    else console.log('connect')
+});
+
 
 
 app.listen(port, ()=> console.log(`server running at port ${port}`));
