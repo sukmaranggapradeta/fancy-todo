@@ -26,7 +26,7 @@ function register(){
     }else{
         // console.log('create user')
         $.ajax({
-            url:'http://localhost:4000/users/',
+            url:'http://fancytodo-server.sukmaranggapradeta.com/users/',
             method:'POST',
             data:{
                 name: $('#register_name').val(), 
@@ -37,7 +37,7 @@ function register(){
         .done((Response)=>{
             // console.log(Response, "response")
             $.ajax({
-                url:'http://localhost:4000/users/login',
+                url:'http://fancytodo-server.sukmaranggapradeta.com/users/login',
                 method:'POST',
                 data:{
                     email: $('#register_email').val(),
@@ -83,7 +83,7 @@ function login(){
         // console.log('Please input email and password')
     } else{
         $.ajax({
-            url:`http://localhost:4000/users/${$('#email').val()}`,
+            url:`http://fancytodo-server.sukmaranggapradeta.com/users/${$('#email').val()}`,
             method:'GET',
         })
         .done((userFound)=>{
@@ -92,7 +92,7 @@ function login(){
                 $('#login-err').show()
             }else{
                 $.ajax({
-                    url:'http://localhost:4000/users/login',
+                    url:'http://fancytodo-server.sukmaranggapradeta.com/users/login',
                     method:'POST',
                     data:{
                         email: $('#email').val(),
@@ -135,7 +135,7 @@ function onSignIn(googleUser) {
     let token = googleUser.getAuthResponse().id_token;
     // console.log(id_token, "ini id_token")
     $.ajax({
-        url:'http://127.0.0.1:4000/google',
+        url:'http://fancytodo-server.sukmaranggapradeta.com/google',
         method:'POST',
         headers:{
             token : token
@@ -145,7 +145,7 @@ function onSignIn(googleUser) {
         // console.log(Response.data)
         // console.log(Response, "ini response")
         $.ajax({
-            url:`http://127.0.0.1:4000/users/${Response.data.email}`,
+            url:`http://fancytodo-server.sukmaranggapradeta.com/users/${Response.data.email}`,
             method:'GET',
             headers:{
                 token : Response.token
@@ -176,7 +176,7 @@ function onSignIn(googleUser) {
                 // console.log(Response.data.name)
                 // console.log(Response.data.email)
                 $.ajax({
-                    url:'http://localhost:4000/users/',
+                    url:'http://fancytodo-server.sukmaranggapradeta.com/users/',
                     method:'POST',
                     data:{
                         name: Response.data.name, 

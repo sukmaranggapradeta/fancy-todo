@@ -6,7 +6,7 @@ function createTodo(){
     let userId = localStorage.getItem('id')
     // console.log(userId)
     $.ajax({
-        url:'http://localhost:4000/todos',
+        url:'http://fancytodo-server.sukmaranggapradeta.com/todos',
         method:'POST',
         data:{ 
             todo_name, description, due_date, owner: userId
@@ -36,7 +36,7 @@ function getMyTodosOpen(){
     $('#todoDetail').show();
     $('#todoDetail').empty();
     $.ajax({
-        url:`http://localhost:4000/todos/open/${localStorage.getItem('id')}`,
+        url:`http://fancytodo-server.sukmaranggapradeta.com/todos/open/${localStorage.getItem('id')}`,
         method:'GET',
         headers:{
             token : localStorage.getItem('token')
@@ -94,7 +94,7 @@ function getMyTodosHistory(){
     $('#todoDetail').show();
     $('#todoDetail').empty();
     $.ajax({
-        url:`http://localhost:4000/todos/history/${localStorage.getItem('id')}`,
+        url:`http://fancytodo-server.sukmaranggapradeta.com/todos/history/${localStorage.getItem('id')}`,
         method:'GET',
         headers:{
             token : localStorage.getItem('token')
@@ -170,7 +170,7 @@ function updateStatus(id){
     // console.log('updateeeed')
     // event.preventDefault();
     $.ajax({
-        url:`http://localhost:4000/todos/${id}`,
+        url:`http://fancytodo-server.sukmaranggapradeta.com/todos/${id}`,
         method:'PUT',
         headers:{
             token : localStorage.getItem('token')
@@ -188,7 +188,7 @@ function updateStatus(id){
 function deleteTodo(id){
     event.preventDefault();
     $.ajax({
-        url:`http://localhost:4000/todos/${id}`,
+        url:`http://fancytodo-server.sukmaranggapradeta.com/todos/${id}`,
         method:'DELETE',
         headers:{
             token : localStorage.getItem('token')
